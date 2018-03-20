@@ -1,0 +1,10 @@
+{
+    "$id": "http://sit-it.org/schemas/authorship-v1.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$comment": "Draft revision",
+    "definitions": {
+        "authors": {
+            "anyOf": [{"type": "string"}]
+        }
+    }
+}

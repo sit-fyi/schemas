@@ -1,0 +1,41 @@
+{
+    "$id": "http://sit-it.org/schemas/issue-tracking-v1.json",
+    "$schema": "http://json-schema.org/draft-07/schema#"
+    "$comment": "Draft revision",
+    "definitions": {
+        "comment": {
+            "$ref": "http://sit-it.org/schemas/commenting-v1.json#/definitions/comment"
+        },
+        "issue": {
+            "type": "object",
+            "properties": {
+                "authors": {
+                    "$ref": "http://sit-it.org/schemas/authorship-v1.json#/definitions/author"
+                },
+                "summary": {
+                    "type": "string"
+                },
+                "details": {
+                    "type": "string" 
+                },
+                "last_updated_timestamp": {
+                    "$ref": "http://sit-it.org/schemas/timestamp-v1.json#"
+                },
+                "timestamp": {
+                    "$ref": "http://sit-it.org/schemas/timestamp-v1.json#"
+                },
+                "state": {
+                    "type": "string",
+                    "enum": ["open", "closed"],
+                },
+                "comments": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/comment"
+                    }
+                }
+                "required": ["summary"]
+            }
+        },
+    },
+}

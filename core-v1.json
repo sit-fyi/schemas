@@ -1,0 +1,25 @@
+{
+    "$id": "http://sit-it.org/schemas/core-v1.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$comment": "Draft revision",
+    "definitions": {
+        "record-reference": {
+            "oneOf": [
+                { "$ref": "#/definitions/_base32" }
+            ]
+        },
+        "item-reference": {
+            "oneOf": [
+                { "$ref": "#/definitions/_uuid" }
+            ]
+        },
+        "_base32": {
+            "type": "string",
+            "pattern": "[A-Z2-7]+"
+        },
+        "_uuid": {
+            "type": "string",
+            "pattern": "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[34][0-9a-fA-F]{3}-[89ab][0-9a-fA-F]{3}-[0-9a-fA-F]{12}"
+        }
+    }
+}
