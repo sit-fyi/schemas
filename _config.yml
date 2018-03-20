@@ -1,1 +1,6 @@
-exclude: .sit
+exclude:
+  - .sit
+  - Makefile
+  - draft-07
+  - package.json
+  - package-lock.json
